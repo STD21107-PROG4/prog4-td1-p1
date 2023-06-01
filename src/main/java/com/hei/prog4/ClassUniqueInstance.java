@@ -2,16 +2,23 @@ package com.hei.prog4;
 
 public enum ClassUniqueInstance {
 
-    INSTANCE("Initial class info");
+    INSTANCE(1);
 
-    private String info;
+    private int click;
 
-    private ClassUniqueInstance(String info) {
-        this.info = info;
+    private ClassUniqueInstance(int info) {
+        this.click = info;
     }
 
     public ClassUniqueInstance getInstance() {
         return INSTANCE;
     }
 
+    public int getClick() {
+        return click;
+    }
+
+    public void setClick(int click) {
+        this.click = click;
+    }
 }
